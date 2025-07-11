@@ -6,11 +6,12 @@ import {
   CdkDropListGroup,
   moveItemInArray,
   transferArrayItem,
+  CdkDragPlaceholder,
 } from '@angular/cdk/drag-drop';
 @Component({
   selector: 'app-root',
   standalone: true,
-   imports: [CdkDropListGroup, CdkDropList, CdkDrag],
+   imports: [CdkDropListGroup, CdkDropList, CdkDrag,CdkDragPlaceholder],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
