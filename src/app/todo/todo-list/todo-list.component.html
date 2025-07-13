@@ -1,0 +1,17 @@
+ <div class="example-container">
+      <h2>{{ title }}</h2>
+      <div
+        cdkDropList
+        [cdkDropListData]="items"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListConnectedTo]="connectedTo"
+      >
+        @for (item of items; track item) {
+          <div class="example-box" cdkDrag>
+            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+            {{ item }}
+          </div>
+        }
+      </div>
+    </div>

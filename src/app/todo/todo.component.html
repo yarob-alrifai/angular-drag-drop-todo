@@ -1,0 +1,26 @@
+  <div cdkDropListGroup>
+      <app-todo-list
+        [title]="'To do'"
+        [items]="todo"
+        [connectedTo]="['waiting-list', 'done-list']"
+        (dropEvent)="drop($event)"
+        cdkDropList
+        id="todo-list"
+      ></app-todo-list>
+      <app-todo-list
+        [title]="'Waiting'"
+        [items]="waiting"
+        [connectedTo]="['todo-list', 'done-list']"
+        (dropEvent)="drop($event)"
+        cdkDropList
+        id="waiting-list"
+      ></app-todo-list>
+      <app-todo-list
+        [title]="'Done'"
+        [items]="done"
+        [connectedTo]="['todo-list', 'waiting-list']"
+        (dropEvent)="drop($event)"
+        cdkDropList
+        id="done-list"
+      ></app-todo-list>
+    </div>
