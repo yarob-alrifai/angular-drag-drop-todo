@@ -36,9 +36,6 @@
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-
-
-
 /* Large Desktop: 1201px and below */
 @media screen and (max-width: 1200px) {
   .example-container {
@@ -57,7 +54,7 @@
     width: 250px;
     margin: 0 10px 10px 0;
   }
-    .example-list {
+  .example-list {
     min-height: 40px;
   }
   .example-box {
@@ -69,16 +66,16 @@
 /* Tablet: 768px and below */
 @media screen and (max-width: 768px) {
   .example-container {
-    width: 100%; 
+    width: 100%;
     margin: 0 0 15px 0;
-    display: block; 
+    display: block;
   }
   .example-list {
     min-height: 50px;
   }
   .example-box {
     padding: 10px 5px;
-    font-size: 11px;
+    font-size: 14px;
   }
 }
 
@@ -94,7 +91,7 @@
   }
   .example-box {
     padding: 8px 4px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .example-custom-placeholder {
     min-height: 40px;
