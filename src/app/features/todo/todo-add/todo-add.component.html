@@ -1,0 +1,25 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="mb-6">
+  <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+    <label for="description" class="text-lg font-medium text-gray-700"
+      >Description:</label
+    >
+    <input
+      id="description"
+      type="text"
+      formControlName="description"
+      class="flex-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:max-w-md"
+      placeholder="Enter a new todo item"
+    />
+    <button
+      type="submit"
+      [disabled]="profileForm.invalid"
+      class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:bg-gray-400 sm:w-auto"
+    >
+      Add Todo
+    </button>
+  </div>
+  @if(profileForm.get('description')?.invalid &&
+  profileForm.get('description')?.touched){
+  <div class="text-red-500 text-sm mt-1">Description is required</div>
+  }
+</form>

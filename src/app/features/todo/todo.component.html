@@ -1,7 +1,10 @@
+  
+  <app-todo-add></app-todo-add>
+  
   <div cdkDropListGroup>
       <app-todo-list
         [title]="'To do'"
-        [items]="todo"
+        [items]="todo()"
         [connectedTo]="['waiting-list', 'done-list']"
         (dropEvent)="drop($event)"
         cdkDropList
@@ -9,7 +12,7 @@
       ></app-todo-list>
       <app-todo-list
         [title]="'Waiting'"
-        [items]="waiting"
+        [items]="waiting()"
         [connectedTo]="['todo-list', 'done-list']"
         (dropEvent)="drop($event)"
         cdkDropList
@@ -17,7 +20,7 @@
       ></app-todo-list>
       <app-todo-list
         [title]="'Done'"
-        [items]="done"
+        [items]="done()"
         [connectedTo]="['todo-list', 'waiting-list']"
         (dropEvent)="drop($event)"
         cdkDropList

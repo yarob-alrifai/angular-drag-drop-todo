@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './todo-list.component.scss'
 })
 export class TodoListComponent {
- @Input() title: string = '';
+ @Input() title = '';
   @Input() items: string[] = [];
   @Input() connectedTo: string[] = []; // IDs of connected drop lists
   @Output() dropEvent = new EventEmitter<CdkDragDrop<string[]>>();
